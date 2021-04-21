@@ -1,12 +1,5 @@
----
 name: Build RPM
-on: 
-  workflow_dispatch:
-    inputs:
-      distribuition:
-        description: 'Define distro version'     
-        required: false
-        default: 'centos-7'
+on: [push, pull_request]
 
 jobs:
   build:
@@ -15,5 +8,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: rpmbuild        
+      - name: rpmbuild
+        with:
+          distribution: centos-7
         uses: robertdebock/rpmbuild-action@1.0.0
