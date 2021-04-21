@@ -1,13 +1,12 @@
 ---
 name: Build RPM
-
-on:
-  - push
-      inputs:
-        distribuition:
-          description: 'Define distro version'     
-          required: fasle
-          default: 'centos-7'
+on: 
+  workflow_dispatch:
+    inputs:
+      distribuition:
+        description: 'Define distro version'     
+        required: false
+        default: 'centos-7'
 
 jobs:
   build:
