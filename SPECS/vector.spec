@@ -5,7 +5,7 @@ Release:	0
 Summary:	Vector is a high-performance, end-to-end (agent & aggregator) observability data platform that puts you in control of your observability data.
 License:	Mozilla Public License 2.0
 URL:		https://github.com/timberio/vector
-Source0:	vector-0.12.2.tar.gz
+Source:	https://github.com/tfinardi/vector-build/blob/main/SOURCES/vector-0.12.2.tar.gz
 BuildArch:	x86_64
 
 %description
