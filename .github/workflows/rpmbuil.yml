@@ -7,8 +7,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: checkout
         uses: actions/checkout@v2
       - name: rpmbuild
+        with: # Set the secret as an input
+          distribution: centos-7
         uses: robertdebock/rpmbuild-action@1.0.0
