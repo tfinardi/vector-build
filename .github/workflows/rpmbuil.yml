@@ -3,6 +3,11 @@ name: Build RPM
 
 on:
   - push
+      inputs:
+        distribuition:
+          description: 'Define distro version'     
+          required: fasle
+          default: 'centos-7'
 
 jobs:
   build:
@@ -11,7 +16,5 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: rpmbuild
-        with: # Set the secret as an input
-          distribution: centos-7
+      - name: rpmbuild        
         uses: robertdebock/rpmbuild-action@1.0.0
