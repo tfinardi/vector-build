@@ -10,5 +10,5 @@ jobs:
         uses: actions/checkout@v2
       - name: rpmbuild
         with:
-          distribution: centos-7
+          INPUT_DISTRIBUTION: centos-7
         uses: robertdebock/rpmbuild-action@1.0.0
